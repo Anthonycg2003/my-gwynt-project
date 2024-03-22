@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class UnitCard : MonoBehaviour
 {
@@ -27,6 +29,6 @@ public class UnitCard : MonoBehaviour
     }
     void OnMouseEnter()
     {
-        GameObject.Find("lupa de cartas").GetComponent<SpriteRenderer>().sprite=gameObject.GetComponent<SpriteRenderer>().sprite;
+        GameObject.Find("lupa de cartas").GetComponent<Image>().sprite=gameObject.GetComponent<Image>().sprite;
     }
 }
