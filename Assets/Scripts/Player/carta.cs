@@ -16,6 +16,9 @@ public class carta : MonoBehaviour
     GameObject d;
     GameObject a;
     GameObject w;
+    GameObject Hcc;
+    GameObject Hd;
+    GameObject Ha;
 
     //en el menu
     public bool IsSelected;
@@ -24,6 +27,8 @@ public class carta : MonoBehaviour
     public turncontroler turncontr;
     //cementerio
     public GameObject graveyard;
+    //fuerza temporal para cartas de aumento
+    public bool poder_temp;
 
     
     void Start()
@@ -32,9 +37,13 @@ public class carta : MonoBehaviour
         d=GameObject.Find("player d zone");
         a=GameObject.Find("player a zone");  
         w=GameObject.Find("weather zone");
+        Hcc=GameObject.Find("player horn cc zone");
+        Hd=GameObject.Find("player horn d zone");
+        Ha=GameObject.Find("player horn a zone");
         graveyard=GameObject.Find("player graveyard");
         IsSelected=false;  
         InMenu=false;  
+        poder_temp=false;
     }
     void Update()
     {
@@ -118,6 +127,30 @@ public class carta : MonoBehaviour
             {
                 w.transform.GetChild(0).SetParent(graveyard.transform);
             }   
+        }
+        else if(tipo=="Hcc")
+        {
+            gameObject.transform.SetParent(Hcc.transform);
+            if(turncontr.play_in_actual_round)
+            {
+                turncontr.yourturn=false;
+            }
+        }
+        else if(tipo=="Hd")
+        {
+            gameObject.transform.SetParent(Hd.transform);
+            if(turncontr.play_in_actual_round)
+            {
+                turncontr.yourturn=false;
+            }
+        }
+        else if(tipo=="Ha")
+        {
+            gameObject.transform.SetParent(Ha.transform);
+            if(turncontr.play_in_actual_round)
+            {
+                turncontr.yourturn=false;
+            }
         }
     }
 }
