@@ -357,6 +357,7 @@
 "Assets/Scripts/Player/carta.cs"
 "Assets/Scripts/Player/deckcontroler.cs"
 "Assets/Scripts/Player/handcontroler.cs"
+"Assets/Scripts/Player/Power.cs"
 "Assets/Scripts/turn controler.cs"
 -langversion:9.0
 

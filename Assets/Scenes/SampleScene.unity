@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 6
   tipo: a
   unidad: p
   IsSelected: 0
@@ -408,7 +408,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 9
   tipo: a
   unidad: p
   IsSelected: 0
@@ -961,7 +961,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 4
   tipo: d
   unidad: p
   IsSelected: 0
@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 13
   tipo: a
   unidad: o
   IsSelected: 1
@@ -1213,6 +1213,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yourturn: 0
+  play_in_actual_round: 0
+  play_O_in_actual_round: 0
   turntext: {fileID: 214082526}
 --- !u!4 &378523227
 Transform:
@@ -1355,7 +1357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 12
   tipo: d
   unidad: o
   IsSelected: 0
@@ -1471,7 +1473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 11
   tipo: d
   unidad: p
   IsSelected: 0
@@ -1587,7 +1589,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 3
   tipo: d
   unidad: o
   IsSelected: 0
@@ -1765,7 +1767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 11
   tipo: cc
   unidad: p
   IsSelected: 0
@@ -2338,7 +2340,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 2
   tipo: cc
   unidad: p
   IsSelected: 0
@@ -2454,7 +2456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 7
   tipo: cc
   unidad: p
   IsSelected: 0
@@ -2969,7 +2971,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 3
   tipo: a
   unidad: p
   IsSelected: 0
@@ -3695,7 +3697,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 6
   tipo: d
   unidad: p
   IsSelected: 0
@@ -4742,7 +4744,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 4
   tipo: a
   unidad: p
   IsSelected: 0
@@ -5212,7 +5214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 7
   tipo: cc
   unidad: p
   IsSelected: 0
@@ -5403,7 +5405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 10
   tipo: d
   unidad: p
   IsSelected: 0
@@ -5519,7 +5521,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 9
   tipo: cc
   unidad: p
   IsSelected: 0
@@ -5635,7 +5637,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 7
   tipo: a
   unidad: p
   IsSelected: 0
@@ -5751,7 +5753,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 0
+  poder: 8
   tipo: a
   unidad: o
   IsSelected: 0
@@ -5825,6 +5827,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2126784349}
+  - component: {fileID: 2126784350}
   m_Layer: 5
   m_Name: player power
   m_TagString: Untagged
@@ -5855,6 +5858,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2126784350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2126784348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b82d941aef258b41a41de79c71933f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CC: {fileID: 611565483}
+  D: {fileID: 187648374}
+  A: {fileID: 1080733537}
+  Fuerza_General: {fileID: 2617753317775697472}
+  Fuerza_CC: {fileID: 1269211300497610314}
+  Fuerza_D: {fileID: 354498818320528784}
+  Fuerza_A: {fileID: 5665932119726914469}
 --- !u!114 &354498818320528784
 MonoBehaviour:
   m_ObjectHideFlags: 0
