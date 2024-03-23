@@ -31,6 +31,7 @@ public class MenuCambio : MonoBehaviour
         {
             //pasando la primera carta de la mano al menu
             Transform card=hand.transform.GetChild(0);
+            card.gameObject.GetComponent<carta>().InMenu=true;
             if(i<5)
             {
                 //pasando los 5 primeros elementos de la mano al primer horizontal del menu
@@ -55,12 +56,14 @@ public class MenuCambio : MonoBehaviour
             if(c1.IsSelected==false)//si la carta no esta seleccionada mandarla a la mano
             {
                 c1.transform.SetParent(hand.transform);
+                c1.InMenu=false;
             }
             else if(c1.IsSelected==true)//si esta seleccionada mandarla al deck
             {
                 c1.transform.SetParent(deck.transform);//haciendola hija de deck para que no se vea
                 deck.GetComponent<deckcontroler>().deck.Add(c1.gameObject);//agregandola a la lista del deck
                 c1.IsSelected=false;//conservar tamano
+                c1.InMenu=false;
                 hand.GetComponent<handcontroler>().contador++;//robar una carta
             }
         }
@@ -71,12 +74,14 @@ public class MenuCambio : MonoBehaviour
             if(c2.IsSelected==false)
             {
                 c2.transform.SetParent(hand.transform);
+                c2.InMenu=false;
             }
             else if(c2.IsSelected==true)
             {
                 c2.transform.SetParent(deck.transform);
                 deck.GetComponent<deckcontroler>().deck.Add(c2.gameObject);
                 c2.IsSelected=false;
+                c2.InMenu=false;
                 hand.GetComponent<handcontroler>().contador++;
             }
             

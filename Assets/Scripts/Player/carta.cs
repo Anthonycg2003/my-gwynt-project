@@ -18,14 +18,18 @@ public class carta : MonoBehaviour
 
     //en el menu
     public bool IsSelected;
+    public bool InMenu;
+    //comprobar si es tu turno
+    public turncontroler turncontr;
 
     
     void Start()
     {
-        cc=GameObject.Find("cc zone");
-        d=GameObject.Find("d zone");
-        a=GameObject.Find("a zone");  
-        IsSelected=false;      
+        cc=GameObject.Find("player cc zone");
+        d=GameObject.Find("player d zone");
+        a=GameObject.Find("player a zone");  
+        IsSelected=false;  
+        InMenu=false;  
     }
     void Update()
     {
@@ -46,14 +50,52 @@ public class carta : MonoBehaviour
     }
     void OnMouseDown()
     {
-        if(IsSelected==true)
+        if(InMenu)
         {
-            IsSelected=false;
+            if(IsSelected==true)
+            {
+                IsSelected=false;
+            }
+            else if(IsSelected==false)
+            {
+                IsSelected=true;
+            }
         }
-        else if(IsSelected==false)
+        else if(turncontr.yourturn)
         {
-            IsSelected=true;
+            Summon();
         }
-
+        else
+        {
+            Debug.Log("no puedes invocar una carta en el turno de tu oponente");            
+        }
+    }
+    void Summon()
+    {
+        //verifica que sea tu turno y el tipo de la carta para asignarle un horizontal como padre 
+        if(tipo.Contains("cc"))
+        {
+            gameObject.transform.SetParent(cc.transform);
+            if(turncontr.play_in_actual_round)
+            {
+                turncontr.yourturn=false;
+            }
+        }
+        else if(tipo.Contains("d"))
+        {
+            gameObject.transform.SetParent(d.transform);
+            if(turncontr.play_in_actual_round)
+            {
+                turncontr.yourturn=false;
+            }
+        }
+        else if(tipo.Contains("a"))
+        {
+            gameObject.transform.SetParent(a.transform);
+            if(turncontr.play_in_actual_round)
+            {
+                turncontr.yourturn=false;
+            }
+        }
     }
 }
