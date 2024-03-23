@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\MenuCambio.cs" />
     <Compile Include="Assets\Scripts\Player\carta.cs" />
     <Compile Include="Assets\Scripts\Player\deckcontroler.cs" />
+    <Compile Include="Assets\Scripts\turn controler.cs" />
     <Compile Include="Assets\Scripts\Player\handcontroler.cs" />
   </ItemGroup>
   <ItemGroup>

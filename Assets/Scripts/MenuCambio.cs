@@ -10,13 +10,14 @@ public class MenuCambio : MonoBehaviour
     public GameObject mostrar_cartas1;
     public GameObject mostrar_cartas2;
     public GameObject deck;
+    public GameObject turncontr;
     void Start()
     {
         hand.GetComponent<handcontroler>().DrawTen+=Active_menu;
     }
     void Update()
     {
-        if(mostrar_cartas1!=null && mostrar_cartas2!=null && menu.activeInHierarchy)
+        if(mostrar_cartas1 !=null && mostrar_cartas2 !=null && menu.activeInHierarchy)
         {
            Only_2_cardsSelect();
         } 
@@ -80,6 +81,7 @@ public class MenuCambio : MonoBehaviour
             }
             
         }
+        turncontr.SetActive(true);
         deck.GetComponent<deckcontroler>().Shuffle();//al finalizar barajear el deck
         DestroyImmediate(menu);//destruir el menu
     }
