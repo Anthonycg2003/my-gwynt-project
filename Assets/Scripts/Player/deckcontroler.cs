@@ -19,7 +19,7 @@ public class deckcontroler : MonoBehaviour
     {
         
     }
-    void Shuffle()
+    public void Shuffle()
     {
         for(int i=0;i<deck.Count;i++)//acc a cada carta del deck
         {
