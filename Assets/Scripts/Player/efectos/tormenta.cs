@@ -15,16 +15,20 @@ public class tormenta : MonoBehaviour
     {
          if(gameObject.transform.parent==GameObject.Find("weather zone").transform)
         {
-            GameObject affect_zone=GameObject.Find("player d zone");
-            for(int i=0;i<affect_zone.transform.childCount;i++)
-            {
-                carta card=affect_zone.transform.GetChild(i).GetComponent<carta>();
-                if(card.unidad=="p")
-                {
-                    card.poder=1;
-                }
-            }
+            Set_power(GameObject.Find("player d zone"));
+            Set_power(GameObject.Find("O d zone"));
         }
         
+    }
+    void Set_power(GameObject affect_zone)
+    {
+        for(int i=0;i<affect_zone.transform.childCount;i++)
+        {
+            carta card=affect_zone.transform.GetChild(i).GetComponent<carta>();
+            if(card.unidad=="p")
+            {
+                card.poder=1;
+            }
+        }
     }
 }

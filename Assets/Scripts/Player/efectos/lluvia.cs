@@ -15,16 +15,21 @@ public class lluvia : MonoBehaviour
     {
         if(gameObject.transform.parent==GameObject.Find("weather zone").transform)
         {
-            GameObject affect_zone=GameObject.Find("player a zone");
-            for(int i=0;i<affect_zone.transform.childCount;i++)
-            {
-                carta card=affect_zone.transform.GetChild(i).GetComponent<carta>();
-                if(card.unidad=="p")
-                {
-                    card.poder=1;
-                }
-            }
+            Set_power(GameObject.Find("player a zone"));
+            Set_power(GameObject.Find("O a zone"));
+
         }
         
+    }
+    void Set_power(GameObject affect_zone)
+    {
+        for(int i=0;i<affect_zone.transform.childCount;i++)
+        {
+            carta card=affect_zone.transform.GetChild(i).GetComponent<carta>();
+            if(card.unidad=="p")
+            {
+                card.poder=1;
+            }
+        }
     }
 }

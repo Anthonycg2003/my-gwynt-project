@@ -29,6 +29,8 @@ public class carta : MonoBehaviour
     public GameObject graveyard;
     //fuerza temporal para cartas de aumento
     public bool poder_temp;
+    //menu para decoy
+    public GameObject menuDecoy;
 
     
     void Start()
@@ -151,6 +153,10 @@ public class carta : MonoBehaviour
             {
                 turncontr.yourturn=false;
             }
+        }
+        else if(tipo=="s")
+        {
+            Instantiate(menuDecoy).transform.SetParent(GameObject.Find("Canvas").transform);  
         }
     }
 }

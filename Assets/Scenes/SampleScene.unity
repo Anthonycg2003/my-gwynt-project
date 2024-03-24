@@ -222,6 +222,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &101255816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -352,6 +353,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &106982632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -549,6 +551,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &145525704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -607,6 +610,151 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 145525701}
+  m_CullTransparentMesh: 1
+--- !u!1 &187343810
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 187343811}
+  - component: {fileID: 187343817}
+  - component: {fileID: 187343816}
+  - component: {fileID: 187343815}
+  - component: {fileID: 187343814}
+  - component: {fileID: 187343813}
+  - component: {fileID: 187343812}
+  m_Layer: 5
+  m_Name: decoy
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &187343811
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187343810}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 209903526}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 101.07, y: 131.3}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &187343812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187343810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c00390a82aab62445af8786c49973c1a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &187343813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187343810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d14f2679c3df144a60eb85270caab9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &187343814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187343810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  poder: 0
+  tipo: s
+  unidad: 
+  IsSelected: 0
+  InMenu: 0
+  turncontr: {fileID: 378523226}
+  graveyard: {fileID: 0}
+  poder_temp: 0
+  menuDecoy: {fileID: 8900185197348624917, guid: 624784d5b3de87e41bc89ab586a38402, type: 3}
+--- !u!65 &187343815
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187343810}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 101, y: 131, z: 1.0001526}
+  m_Center: {x: 0, y: 0, z: -0.00007629208}
+--- !u!114 &187343816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187343810}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 2d35cc5d9d0877b4d98753b8bab01233, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &187343817
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187343810}
   m_CullTransparentMesh: 1
 --- !u!1 &187648374
 GameObject:
@@ -725,6 +873,7 @@ RectTransform:
   - {fileID: 1907165360}
   - {fileID: 1652137467}
   - {fileID: 1852931786}
+  - {fileID: 187343811}
   m_Father: {fileID: 279434868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -949,6 +1098,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 269696258}
+  - component: {fileID: 269696259}
   m_Layer: 5
   m_Name: O a zone
   m_TagString: Untagged
@@ -975,6 +1125,32 @@ RectTransform:
   m_AnchoredPosition: {x: 147.01, y: 467.5}
   m_SizeDelta: {x: 795.05, y: 115.11}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &269696259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269696257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30649d3a9faa99c48a7b1166b86bf2a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 0
+  m_Spacing: 0
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &270849504
 GameObject:
   m_ObjectHideFlags: 0
@@ -1111,6 +1287,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &299871481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1270,6 +1447,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &372867782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1511,6 +1689,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &387142790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1629,6 +1808,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &400432147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1747,6 +1927,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &505985486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1927,6 +2108,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &530193961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2502,6 +2684,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &731137220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2620,6 +2803,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &756389856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3137,6 +3321,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &896288518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3256,6 +3441,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &979873109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3996,6 +4182,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1227418956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4723,11 +4910,11 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 279434868}
+  - {fileID: 1603890223}
   - {fileID: 668771642}
   - {fileID: 1030362127}
   - {fileID: 1573156167}
-  - {fileID: 279434868}
-  - {fileID: 1603890223}
   - {fileID: 214082525}
   - {fileID: 1240860015}
   - {fileID: 1069716712}
@@ -4868,7 +5055,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1603890223
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4967,6 +5154,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1652137470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5189,6 +5377,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1689259362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5626,6 +5815,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1814849883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5758,6 +5948,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1852931789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5923,6 +6114,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1905069309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6055,6 +6247,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1907165363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6260,6 +6453,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1938047283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6378,6 +6572,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1942923586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6497,6 +6692,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1972361849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6627,6 +6823,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &1988496452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6745,6 +6942,7 @@ MonoBehaviour:
   turncontr: {fileID: 378523226}
   graveyard: {fileID: 0}
   poder_temp: 0
+  menuDecoy: {fileID: 0}
 --- !u!65 &2048301350
 BoxCollider:
   m_ObjectHideFlags: 0
