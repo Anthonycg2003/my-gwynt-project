@@ -31,6 +31,8 @@ public class carta : MonoBehaviour
     public bool poder_temp;
     //menu para decoy
     public GameObject menuDecoy;
+    //comprobar si esta en el campo
+    public bool InBattle;
 
     
     void Start()
@@ -46,6 +48,7 @@ public class carta : MonoBehaviour
         IsSelected=false;  
         InMenu=false;  
         poder_temp=false;
+        InBattle=false;
     }
     void Update()
     {
@@ -89,73 +92,82 @@ public class carta : MonoBehaviour
     void Summon()
     {
         //verifica que sea tu turno y el tipo de la carta para asignarle un horizontal como padre 
-        if(tipo=="cc")
+        if(tipo=="cc" && InBattle==false)
         {
             gameObject.transform.SetParent(cc.transform);
+            InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="d")
+        else if(tipo=="d" && InBattle==false)
         {
             gameObject.transform.SetParent(d.transform);
+             InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="a")
+        else if(tipo=="a" && InBattle==false)
         {
             gameObject.transform.SetParent(a.transform);
+             InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="w")
+        else if(tipo=="w" && InBattle==false)
         {
             gameObject.transform.SetParent(w.transform);
+             InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="despeje")
+        else if(tipo=="despeje" && InBattle==false)
         {
             gameObject.transform.SetParent(graveyard.transform);
+            InBattle=true;
             int a=w.transform.childCount;
             for(int i=0;i<a;i++)
             {
                 w.transform.GetChild(0).SetParent(graveyard.transform);
             }   
         }
-        else if(tipo=="Hcc")
+        else if(tipo=="Hcc" && InBattle==false)
         {
             gameObject.transform.SetParent(Hcc.transform);
+             InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="Hd")
+        else if(tipo=="Hd"&& InBattle==false)
         {
             gameObject.transform.SetParent(Hd.transform);
+             InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="Ha")
+        else if(tipo=="Ha"&& InBattle==false)
         {
             gameObject.transform.SetParent(Ha.transform);
+             InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="s")
+        else if(tipo=="s" && InBattle==false)
         {
+             InBattle=true;
             Instantiate(menuDecoy).transform.SetParent(GameObject.Find("Canvas").transform);  
         }
     }

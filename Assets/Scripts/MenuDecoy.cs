@@ -126,6 +126,7 @@ public class MenuDecoy : MonoBehaviour
             if(card.gameObject.GetComponent<carta>().IsSelected)
             {
                 card.gameObject.GetComponent<carta>().InMenu=false;
+                card.gameObject.GetComponent<carta>().InBattle=false;
                 card.SetParent(GameObject.Find("player hand").transform);
                 card.gameObject.GetComponent<carta>().IsSelected=false;
                 GameObject.Find("decoy").transform.SetParent(zone.transform);

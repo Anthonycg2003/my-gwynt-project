@@ -624,8 +624,6 @@ GameObject:
   - component: {fileID: 187343816}
   - component: {fileID: 187343815}
   - component: {fileID: 187343814}
-  - component: {fileID: 187343813}
-  - component: {fileID: 187343812}
   m_Layer: 5
   m_Name: decoy
   m_TagString: Untagged
@@ -652,30 +650,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 101.07, y: 131.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &187343812
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187343810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c00390a82aab62445af8786c49973c1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &187343813
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187343810}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d14f2679c3df144a60eb85270caab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &187343814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5094,7 +5068,6 @@ GameObject:
   - component: {fileID: 1652137471}
   - component: {fileID: 1652137470}
   - component: {fileID: 1652137469}
-  - component: {fileID: 1652137468}
   - component: {fileID: 1652137473}
   m_Layer: 5
   m_Name: horn d zone
@@ -5122,18 +5095,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 101.07, y: 131.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1652137468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652137466}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d14f2679c3df144a60eb85270caab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1652137469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5888,7 +5849,6 @@ GameObject:
   - component: {fileID: 1852931790}
   - component: {fileID: 1852931789}
   - component: {fileID: 1852931788}
-  - component: {fileID: 1852931787}
   - component: {fileID: 1852931792}
   m_Layer: 5
   m_Name: horn a zone
@@ -5916,18 +5876,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 101.07, y: 131.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1852931787
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1852931785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d14f2679c3df144a60eb85270caab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1852931788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6187,7 +6135,6 @@ GameObject:
   - component: {fileID: 1907165364}
   - component: {fileID: 1907165363}
   - component: {fileID: 1907165362}
-  - component: {fileID: 1907165361}
   - component: {fileID: 1907165366}
   m_Layer: 5
   m_Name: horn cc zone
@@ -6215,18 +6162,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 101.07, y: 131.3}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1907165361
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1907165359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 73d14f2679c3df144a60eb85270caab9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1907165362
 MonoBehaviour:
   m_ObjectHideFlags: 0
