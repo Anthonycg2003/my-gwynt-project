@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\MenuDecoy.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\hornCC.cs" />
     <Compile Include="Assets\Scripts\MenuCambio.cs" />
+    <Compile Include="Assets\Prefabs\Destroy tem text.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\lluvia.cs" />
     <Compile Include="Assets\Scripts\Player\Power.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\hornD.cs" />
@@ -73,8 +74,10 @@
     <Compile Include="Assets\Scripts\Player\carta.cs" />
     <Compile Include="Assets\Scripts\Player\deckcontroler.cs" />
     <Compile Include="Assets\Scripts\turn controler.cs" />
+    <Compile Include="Assets\Scripts\game controler.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\sol.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\hornA.cs" />
+    <Compile Include="Assets\Scripts\round controler.cs" />
     <Compile Include="Assets\Scripts\Player\handcontroler.cs" />
   </ItemGroup>
   <ItemGroup>

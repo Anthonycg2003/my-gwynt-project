@@ -159,7 +159,7 @@ public class carta : MonoBehaviour
         else if(tipo=="Ha"&& InBattle==false)
         {
             gameObject.transform.SetParent(Ha.transform);
-             InBattle=true;
+            InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
