@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,10 +34,19 @@ public class carta : MonoBehaviour
     public GameObject menuDecoy;
     //comprobar si esta en el campo
     public bool InBattle;
-
+    //cartas que tienen mas de un tipo
+    public bool Ready_to_cc;
+    public bool Ready_to_d;
+    public bool Ready_to_a;
+    public GameObject block_hand;
+    GameObject pass_turn;
+    GameObject pass_Oturn;
+    public TMP_Text texto_multitipo;
     
     void Start()
     {
+        pass_turn=GameObject.Find("pass turn");
+        pass_Oturn=GameObject.Find("pass O turn");
         cc=GameObject.Find("player cc zone");
         d=GameObject.Find("player d zone");
         a=GameObject.Find("player a zone");  
@@ -49,6 +59,9 @@ public class carta : MonoBehaviour
         InMenu=false;  
         poder_temp=false;
         InBattle=false;
+        Ready_to_cc=false;
+        Ready_to_a=false;
+        Ready_to_d=false;
     }
     void Update()
     {
@@ -60,8 +73,7 @@ public class carta : MonoBehaviour
         else if(IsSelected==false)
         {
             gameObject.transform.localScale=new Vector3(1,1,1);
- 
-        }   
+        }  
     }
     void OnMouseEnter()
     {
@@ -167,8 +179,30 @@ public class carta : MonoBehaviour
         }
         else if(tipo=="s" && InBattle==false)
         {
-             InBattle=true;
+            InBattle=true;
             Instantiate(menuDecoy).transform.SetParent(GameObject.Find("Canvas").transform);  
+        }
+        else if(tipo=="cc y d" && InBattle==false)
+        {
+            Ready_to_cc=true;
+            Ready_to_d=true;
+            cc.GetComponent<Collider2D>().enabled=true;
+            d.GetComponent<Collider2D>().enabled=true; 
+            Instantiate(block_hand,GameObject.Find("Canvas").transform);
+            pass_Oturn.SetActive(false);
+            pass_turn.SetActive(false);
+             Instantiate(texto_multitipo,GameObject.Find("Canvas").transform);
+        }
+        else if(tipo=="a y d" && InBattle==false)
+        {
+            Ready_to_a=true;
+            Ready_to_d=true;
+            a.GetComponent<Collider2D>().enabled=true;
+            d.GetComponent<Collider2D>().enabled=true; 
+            Instantiate(block_hand,GameObject.Find("Canvas").transform);
+            pass_Oturn.SetActive(false);
+            pass_turn.SetActive(false);
+            Instantiate(texto_multitipo,GameObject.Find("Canvas").transform);
         }
     }
 }

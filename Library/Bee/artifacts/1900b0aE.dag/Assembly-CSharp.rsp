@@ -367,6 +367,9 @@
 "Assets/Scripts/Player/efectos/tormenta.cs"
 "Assets/Scripts/Player/handcontroler.cs"
 "Assets/Scripts/Player/Power.cs"
+"Assets/Scripts/Player/summon_in_a.cs"
+"Assets/Scripts/Player/summon_in_cc.cs"
+"Assets/Scripts/Player/summon_in_d.cs"
 "Assets/Scripts/round controler.cs"
 "Assets/Scripts/turn controler.cs"
 -langversion:9.0

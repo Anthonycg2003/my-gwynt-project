@@ -224,6 +224,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &101255816
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -356,6 +361,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &106982632
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -555,6 +565,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &145525704
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -675,6 +690,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 8900185197348624917, guid: 624784d5b3de87e41bc89ab586a38402, type: 3}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &187343815
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -744,6 +764,8 @@ GameObject:
   m_Component:
   - component: {fileID: 187648375}
   - component: {fileID: 187648376}
+  - component: {fileID: 187648377}
+  - component: {fileID: 187648378}
   m_Layer: 5
   m_Name: player d zone
   m_TagString: Untagged
@@ -796,6 +818,64 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!61 &187648377
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187648374}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.9960785, y: -1.4941521}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 799.87, y: 121.52775}
+  m_EdgeRadius: 0
+--- !u!114 &187648378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 187648374}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920eec14809acdf49a2263ebc9f6467c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turncontrol: {fileID: 378523226}
 --- !u!1 &209903525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1269,6 +1349,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &299871481
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1505,6 +1590,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &372867782
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1748,6 +1838,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &387142790
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1868,6 +1963,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &400432147
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1979,7 +2079,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poder: 3
-  tipo: d
+  tipo: a y d
   unidad: o
   IsSelected: 0
   InMenu: 0
@@ -1988,6 +2088,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 7507984792210637940, guid: ecd31a35e7494ad4790c43f3b31f5dba, type: 3}
+  texto_multitipo: {fileID: 4369883130423933055, guid: f8f5dc58345ab11448dd951bc2fdb851, type: 3}
 --- !u!65 &505985486
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2102,8 +2207,8 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -2170,6 +2275,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &530193961
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2393,6 +2503,8 @@ GameObject:
   m_Component:
   - component: {fileID: 611565484}
   - component: {fileID: 611565485}
+  - component: {fileID: 611565486}
+  - component: {fileID: 611565487}
   m_Layer: 5
   m_Name: player cc zone
   m_TagString: Untagged
@@ -2445,6 +2557,64 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!61 &611565486
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611565483}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 1.4940491, y: -1.4941483}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 806.84247, y: 125.51216}
+  m_EdgeRadius: 0
+--- !u!114 &611565487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 611565483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a365fb07d3fdd144bd6be9320797b26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turncontrol: {fileID: 378523226}
 --- !u!1 &641723844
 GameObject:
   m_ObjectHideFlags: 0
@@ -2553,11 +2723,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 611565484}
+  - {fileID: 187648375}
+  - {fileID: 1080733538}
   - {fileID: 1432758409}
   - {fileID: 1088587347}
   - {fileID: 524528674}
-  - {fileID: 187648375}
-  - {fileID: 1080733538}
   m_Father: {fileID: 279434868}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -2747,6 +2917,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &731137220
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2867,6 +3042,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &756389856
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3386,6 +3566,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &896288518
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3507,6 +3692,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &979873109
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3931,6 +4121,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1080733538}
   - component: {fileID: 1080733539}
+  - component: {fileID: 1080733540}
+  - component: {fileID: 1080733541}
   m_Layer: 5
   m_Name: player a zone
   m_TagString: Untagged
@@ -3983,6 +4175,64 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!61 &1080733540
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080733537}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.99612427, y: 2.988266}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 795.8857, y: 122.52388}
+  m_EdgeRadius: 0
+--- !u!114 &1080733541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080733537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6486549f56172bc4ea421ea5b0c62bd6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turncontrol: {fileID: 378523226}
 --- !u!1 &1088587346
 GameObject:
   m_ObjectHideFlags: 0
@@ -4038,8 +4288,8 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -4315,7 +4565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poder: 6
-  tipo: d
+  tipo: cc y d
   unidad: p
   IsSelected: 0
   InMenu: 0
@@ -4324,6 +4574,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 7507984792210637940, guid: ecd31a35e7494ad4790c43f3b31f5dba, type: 3}
+  texto_multitipo: {fileID: 4369883130423933055, guid: f8f5dc58345ab11448dd951bc2fdb851, type: 3}
 --- !u!65 &1227418956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4716,8 +4971,8 @@ MonoBehaviour:
     m_Bottom: 0
   m_ChildAlignment: 0
   m_Spacing: 0
-  m_ChildForceExpandWidth: 1
-  m_ChildForceExpandHeight: 1
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
@@ -5423,6 +5678,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1652137470
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5695,6 +5955,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1689259362
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6134,6 +6399,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1814849883
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6255,6 +6525,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1852931789
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6422,6 +6697,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1905069309
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6543,6 +6823,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1907165363
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6825,6 +7110,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1938047283
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6945,6 +7235,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1942923586
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7066,6 +7361,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &1972361849
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7189,7 +7489,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poder: 7
-  tipo: a
+  tipo: a y d
   unidad: p
   IsSelected: 0
   InMenu: 0
@@ -7198,6 +7498,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 7507984792210637940, guid: ecd31a35e7494ad4790c43f3b31f5dba, type: 3}
+  texto_multitipo: {fileID: 4369883130423933055, guid: f8f5dc58345ab11448dd951bc2fdb851, type: 3}
 --- !u!65 &1988496452
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7318,6 +7623,11 @@ MonoBehaviour:
   poder_temp: 0
   menuDecoy: {fileID: 0}
   InBattle: 0
+  Ready_to_cc: 0
+  Ready_to_d: 0
+  Ready_to_a: 0
+  block_hand: {fileID: 0}
+  texto_multitipo: {fileID: 0}
 --- !u!65 &2048301350
 BoxCollider:
   m_ObjectHideFlags: 0
