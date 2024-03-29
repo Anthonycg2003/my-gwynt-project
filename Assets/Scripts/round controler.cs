@@ -21,9 +21,10 @@ public class roundcontroler : MonoBehaviour
     public GameObject hornA;
     public GameObject hornCc;
     public GameObject hornD;
-    Text TotalPower;
-    Text totalOPower;
+    GameObject TotalPower;
+    GameObject totalOPower;
     public GameObject hand;
+    GameObject O_hand;
     public turncontroler Turncontroler;
 
    //bool para mandar solo una vez al cementerio
@@ -34,6 +35,7 @@ public class roundcontroler : MonoBehaviour
    public TMP_Text round_draw;
    public int player_round_wins;
    public int O_round_wins;
+   bool finish_game;
    
     // Start is called before the first frame update
     void Start()
@@ -41,15 +43,17 @@ public class roundcontroler : MonoBehaviour
         round=1;
         pass_1st_round=false;
         pass_2nd_round=false;
-        TotalPower=GameObject.Find("total power").GetComponent<Text>();
-        totalOPower=GameObject.Find("O total power").GetComponent<Text>();
+        TotalPower=GameObject.Find("player power");
+        totalOPower=GameObject.Find("O power");
+        O_hand=GameObject.Find("O hand");
+        finish_game=false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        int player_power=Convert.ToInt32(TotalPower.text);
-        int O_power=Convert.ToInt32(totalOPower.text);
+        int player_power=TotalPower.GetComponent<Power>().Fuerza_total;
+        int O_power=totalOPower.GetComponent<OPower>().Fuerza_total;
         if(round==2 && pass_1st_round==false)
         {
             if(player_power>O_power)
@@ -84,7 +88,8 @@ public class roundcontroler : MonoBehaviour
             Send_graveyardO(Oa);
             Send_graveyardO(Occ);
             Send_graveyardO(Od);
-            hand.GetComponent<handcontroler>().contador+=2;//para robar 2 cartas al finalizar la ronda
+            hand.GetComponent<handcontroler>().contador+=2;
+            O_hand.GetComponent<Ohandcontroler>().contador-=2;//para robar 2 cartas al finalizar la ronda
             pass_1st_round=true;
         }
         if(round==3 && pass_2nd_round==false)
@@ -123,8 +128,9 @@ public class roundcontroler : MonoBehaviour
             Send_graveyardO(Od);
             hand.GetComponent<handcontroler>().contador+=2;//para robar 2 cartas al finalizar la ronda
             pass_2nd_round=true;
+            O_hand.GetComponent<Ohandcontroler>().contador-=2;
         }
-        if(round==4)
+        if(round==4 && finish_game==false)
         {
             if(player_power>O_power)
             {
@@ -136,7 +142,7 @@ public class roundcontroler : MonoBehaviour
                 O_round_wins++;
                 Instantiate(round_lose,GameObject.Find("Canvas").transform);
             }
-            else
+            else if(O_power==player_power)
             {
                 O_round_wins++;
                 player_round_wins++;
@@ -152,6 +158,7 @@ public class roundcontroler : MonoBehaviour
             Send_graveyardO(Oa);
             Send_graveyardO(Occ);
             Send_graveyardO(Od);
+            finish_game=true;
         }
     }
     void Send_graveyard(GameObject zone)

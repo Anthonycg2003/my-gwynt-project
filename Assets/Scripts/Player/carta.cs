@@ -131,10 +131,10 @@ public class carta : MonoBehaviour
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="w" && InBattle==false)
+        else if(tipo=="w" && InBattle==false && w.transform.childCount<3)
         {
             gameObject.transform.SetParent(w.transform);
-             InBattle=true;
+            InBattle=true;
             if(turncontr.play_in_actual_round)
             {
                 turncontr.yourturn=false;
@@ -150,7 +150,7 @@ public class carta : MonoBehaviour
                 w.transform.GetChild(0).SetParent(graveyard.transform);
             }   
         }
-        else if(tipo=="Hcc" && InBattle==false)
+        else if(tipo=="Hcc" && InBattle==false && Hcc.transform.childCount<1)
         {
             gameObject.transform.SetParent(Hcc.transform);
              InBattle=true;
@@ -159,7 +159,7 @@ public class carta : MonoBehaviour
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="Hd"&& InBattle==false)
+        else if(tipo=="Hd"&& InBattle==false && Hd.transform.childCount<1)
         {
             gameObject.transform.SetParent(Hd.transform);
              InBattle=true;
@@ -168,7 +168,7 @@ public class carta : MonoBehaviour
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="Ha"&& InBattle==false)
+        else if(tipo=="Ha"&& InBattle==false && Ha.transform.childCount<1)
         {
             gameObject.transform.SetParent(Ha.transform);
             InBattle=true;

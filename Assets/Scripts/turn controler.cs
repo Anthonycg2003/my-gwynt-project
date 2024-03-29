@@ -68,6 +68,7 @@ public class turncontroler : MonoBehaviour
         {
             GameObject.Find("round controler").GetComponent<roundcontroler>().round+=1;
             count_pass_round=0;
+            play_in_actual_round=true;
         }
 
     }

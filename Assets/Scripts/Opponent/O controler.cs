@@ -41,6 +41,7 @@ public class Ocontroler : MonoBehaviour
         if(contador==4 && Trcontrol.yourturn==false)
         {
             Trcontrol.PassOTurn();
+            contador=0;
         }
     }
     void Summon(GameObject card)
