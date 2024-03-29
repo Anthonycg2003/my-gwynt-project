@@ -12,8 +12,12 @@ public class roundcontroler : MonoBehaviour
     public GameObject cc;
     public GameObject d;
     public GameObject a;
+    public GameObject Occ;
+    public GameObject Od;
+    public GameObject Oa;
     public GameObject w;
     public GameObject Graveyard;
+    public GameObject GraveyardO;
     public GameObject hornA;
     public GameObject hornCc;
     public GameObject hornD;
@@ -77,6 +81,9 @@ public class roundcontroler : MonoBehaviour
             Send_graveyard(hornD);
             Send_graveyard(hornA);
             Send_graveyard(hornCc);
+            Send_graveyardO(Oa);
+            Send_graveyardO(Occ);
+            Send_graveyardO(Od);
             hand.GetComponent<handcontroler>().contador+=2;//para robar 2 cartas al finalizar la ronda
             pass_1st_round=true;
         }
@@ -111,6 +118,9 @@ public class roundcontroler : MonoBehaviour
             Send_graveyard(hornD);
             Send_graveyard(hornA);
             Send_graveyard(hornCc);
+            Send_graveyardO(Oa);
+            Send_graveyardO(Occ);
+            Send_graveyardO(Od);
             hand.GetComponent<handcontroler>().contador+=2;//para robar 2 cartas al finalizar la ronda
             pass_2nd_round=true;
         }
@@ -139,6 +149,9 @@ public class roundcontroler : MonoBehaviour
             Send_graveyard(hornD);
             Send_graveyard(hornA);
             Send_graveyard(hornCc);
+            Send_graveyardO(Oa);
+            Send_graveyardO(Occ);
+            Send_graveyardO(Od);
         }
     }
     void Send_graveyard(GameObject zone)
@@ -149,4 +162,13 @@ public class roundcontroler : MonoBehaviour
             zone.transform.GetChild(0).SetParent(Graveyard.transform);
         }
     }
+    void Send_graveyardO(GameObject zone)
+    {
+        int count_child=zone.transform.childCount;
+        for(int i=0;i<count_child;i++)
+        {
+            zone.transform.GetChild(0).SetParent(GraveyardO.transform);
+        }
+    }
+
 }

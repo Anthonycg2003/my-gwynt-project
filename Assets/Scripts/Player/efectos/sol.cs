@@ -16,7 +16,7 @@ public class sol : MonoBehaviour
          if(gameObject.transform.parent==GameObject.Find("weather zone").transform)
         {
             Set_power(GameObject.Find("player cc zone"));
-            Set_power(GameObject.Find("O cc zone"));
+            Set_powerO(GameObject.Find("O cc zone"));
         }
         
     }
@@ -25,6 +25,17 @@ public class sol : MonoBehaviour
         for(int i=0;i<affect_zone.transform.childCount;i++)
         {
             carta card=affect_zone.transform.GetChild(i).GetComponent<carta>();
+            if(card.unidad=="p")
+            {
+                card.poder=1;
+            }
+        }
+    }
+    void Set_powerO(GameObject affect_zone)
+    {
+        for(int i=0;i<affect_zone.transform.childCount;i++)
+        {
+            Ocarta card=affect_zone.transform.GetChild(i).GetComponent<Ocarta>();
             if(card.unidad=="p")
             {
                 card.poder=1;

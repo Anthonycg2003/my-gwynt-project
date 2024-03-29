@@ -1,3 +1,4 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -9,14 +10,12 @@ public class turncontroler : MonoBehaviour
 {
     public bool yourturn;
     public bool play_in_actual_round;
-    public bool play_O_in_actual_round;
     public TMP_Text turntext;
-    int count_pass_round;
-    void Start()
+    public int count_pass_round;
+    void Awake()
     {
         StarTurn();
         play_in_actual_round=true;
-        play_O_in_actual_round=true;
         count_pass_round=0;
     }
     void Update()
@@ -65,7 +64,7 @@ public class turncontroler : MonoBehaviour
     }
     void PassRound()
     {
-        if(count_pass_round==2)
+        if(count_pass_round>=2)
         {
             GameObject.Find("round controler").GetComponent<roundcontroler>().round+=1;
             count_pass_round=0;

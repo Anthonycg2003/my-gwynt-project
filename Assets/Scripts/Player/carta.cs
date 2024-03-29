@@ -179,8 +179,16 @@ public class carta : MonoBehaviour
         }
         else if(tipo=="s" && InBattle==false)
         {
-            InBattle=true;
-            Instantiate(menuDecoy).transform.SetParent(GameObject.Find("Canvas").transform);  
+            if(cc.transform.childCount!=0 || d.transform.childCount!=0 || a.transform.childCount!=0)
+            {
+                InBattle=true;
+                Instantiate(menuDecoy).transform.SetParent(GameObject.Find("Canvas").transform);
+            }
+            else
+            {
+                Debug.Log("No hay cartas en el campo para devolver a la mano");
+            }
+              
         }
         else if(tipo=="cc y d" && InBattle==false)
         {
