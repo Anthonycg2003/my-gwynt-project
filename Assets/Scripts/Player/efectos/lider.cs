@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class lider : MonoBehaviour
 {
@@ -15,9 +16,9 @@ public class lider : MonoBehaviour
         hand_control=GameObject.Find("player hand").GetComponent<handcontroler>(); 
         efect_activate=false;
     }
-    void Update()
+   void OnMouseEnter()
     {
-        
+        GameObject.Find("lupa de cartas").GetComponent<Image>().sprite=gameObject.GetComponent<Image>().sprite;
     }
     void OnMouseDown()
     {

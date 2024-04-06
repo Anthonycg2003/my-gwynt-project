@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a06656ee0e4e946bb01b4cb9d6598b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 12
+  poder: 10
   tipo: d
   unidad: o
 --- !u!1 &51757705
@@ -1233,7 +1233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85a06656ee0e4e946bb01b4cb9d6598b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 13
+  poder: 9
   tipo: a
   unidad: o
 --- !u!1 &209903525
@@ -2205,7 +2205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 13
+  poder: 9
   tipo: a
   unidad: o
   IsSelected: 1
@@ -2389,7 +2389,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f1bc46b93e805c498fdb83534cc4700, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e302a966d2babc44802752b99d39cbf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2492,7 +2492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94c52287bcbc41443b4d9c5be47bcd8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  poder: 12
+  poder: 10
   tipo: d
   unidad: o
   IsSelected: 0
@@ -3060,7 +3060,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 5f1bc46b93e805c498fdb83534cc4700, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2e302a966d2babc44802752b99d39cbf, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
