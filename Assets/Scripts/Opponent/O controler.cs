@@ -14,7 +14,8 @@ public class Ocontroler : MonoBehaviour
     GameObject Hd;
     GameObject Ha;
     GameObject hand;
-    int contador;
+    public int contador;
+    bool Is_Summon;
     void Start()
     {
         hand=GameObject.Find("O hand");
@@ -26,17 +27,14 @@ public class Ocontroler : MonoBehaviour
         Hd=GameObject.Find("O horn d zone");
         Ha=GameObject.Find("O horn a zone");
         contador=0;
-        
+        Is_Summon=false;   
     }
     void Update()
     {
-        if(Trcontrol.yourturn==false && contador<4 && Trcontrol.isActiveAndEnabled)
+        if(Trcontrol.yourturn==false && contador<4 && Trcontrol.isActiveAndEnabled && Is_Summon==false && Trcontrol.play_Oin_actual_round)
         {
-            int cards_in_hand=hand.transform.childCount;
-            int random=Random.Range(0,cards_in_hand);
-            Summon(hand.transform.GetChild(random).gameObject);
-            contador++;
-
+            Invoke("Summon",2f);
+            Is_Summon=true;
         }
         if(contador==4 && Trcontrol.yourturn==false)
         {
@@ -44,13 +42,16 @@ public class Ocontroler : MonoBehaviour
             contador=0;
         }
     }
-    void Summon(GameObject card)
+    void Summon()
     {
+        int cards_in_hand=hand.transform.childCount;
+        int random=Random.Range(0,cards_in_hand);
+        GameObject card=hand.transform.GetChild(random).gameObject;
         Ocarta comp_carta=card.GetComponent<Ocarta>();
         if(comp_carta.tipo=="cc")
         {
             card.transform.SetParent(cc.transform);
-             if(Trcontrol.play_in_actual_round)
+            if(Trcontrol.play_in_actual_round)
             {
                 Trcontrol.yourturn=true;
             }
@@ -103,6 +104,8 @@ public class Ocontroler : MonoBehaviour
                 Trcontrol.yourturn=true;
             }
         }
+        Is_Summon=false;
+        contador++;
 
     }
 }

@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\game controler.cs" />
     <Compile Include="Assets\Scripts\Opponent\O handcontroler.cs" />
     <Compile Include="Assets\Scripts\Player\summon_in_cc.cs" />
+    <Compile Include="Assets\Scripts\Player\efectos\lider.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\sol.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\hornA.cs" />
     <Compile Include="Assets\Scripts\round controler.cs" />

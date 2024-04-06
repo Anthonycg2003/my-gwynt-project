@@ -10,12 +10,16 @@ public class turncontroler : MonoBehaviour
 {
     public bool yourturn;
     public bool play_in_actual_round;
+    public bool play_Oin_actual_round;
     public TMP_Text turntext;
+    public TMP_Text pass_turn_text;
+    public TMP_Text pass_o_turn_text;
     public int count_pass_round;
     void Awake()
     {
         StarTurn();
         play_in_actual_round=true;
+        play_Oin_actual_round=true;
         count_pass_round=0;
     }
     void Update()
@@ -48,7 +52,8 @@ public class turncontroler : MonoBehaviour
         {
             yourturn=false;
             play_in_actual_round=false;
-            count_pass_round+=1;
+            Invoke("Count_pass_round",3f);
+            Instantiate(pass_turn_text,GameObject.Find("Canvas").transform);
         }
         
     }
@@ -57,10 +62,10 @@ public class turncontroler : MonoBehaviour
         if(yourturn==false)
         {
             yourturn=true;
-            play_in_actual_round=false;
-            count_pass_round+=1;
-        }
-        
+            play_Oin_actual_round=false;
+            Invoke("Count_pass_round",3f);
+            Instantiate(pass_o_turn_text,GameObject.Find("Canvas").transform);
+        }    
     }
     void PassRound()
     {
@@ -69,7 +74,11 @@ public class turncontroler : MonoBehaviour
             GameObject.Find("round controler").GetComponent<roundcontroler>().round+=1;
             count_pass_round=0;
             play_in_actual_round=true;
+            play_Oin_actual_round=true;
         }
-
+    }
+    void Count_pass_round()
+    {
+        count_pass_round+=1;
     }
 }

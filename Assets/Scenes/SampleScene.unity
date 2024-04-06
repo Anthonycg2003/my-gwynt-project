@@ -295,6 +295,7 @@ MonoBehaviour:
   Fuerza_CC: {fileID: 641723846}
   Fuerza_D: {fileID: 123276444}
   Fuerza_A: {fileID: 821928980}
+  Fuerza_total: 0
 --- !u!1 &101255813
 GameObject:
   m_ObjectHideFlags: 0
@@ -2211,7 +2212,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   yourturn: 0
   play_in_actual_round: 0
+  play_Oin_actual_round: 0
   turntext: {fileID: 214082526}
+  pass_turn_text: {fileID: 872537164673675691, guid: efc7f9537a04eba42a6ae6467c9d7a9f, type: 3}
+  pass_o_turn_text: {fileID: 6458507473424026626, guid: 7b750818bf987d948b49e0f3b0847381, type: 3}
   count_pass_round: 0
 --- !u!4 &378523227
 Transform:
@@ -2239,6 +2243,8 @@ GameObject:
   - component: {fileID: 378645381}
   - component: {fileID: 378645383}
   - component: {fileID: 378645382}
+  - component: {fileID: 378645385}
+  - component: {fileID: 378645384}
   m_Layer: 5
   m_Name: player leader
   m_TagString: Untagged
@@ -2303,6 +2309,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 378645380}
   m_CullTransparentMesh: 1
+--- !u!114 &378645384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378645380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a473d40f5e910e40ab6995363688a4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  turncontr: {fileID: 378523226}
+--- !u!65 &378645385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 378645380}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 104, y: 143, z: 1.0001526}
+  m_Center: {x: 0, y: 0, z: -0.00007629208}
 --- !u!1 &387142787
 GameObject:
   m_ObjectHideFlags: 0
@@ -5659,7 +5699,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1207888825}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -8628,6 +8668,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Trcontrol: {fileID: 378523226}
+  contador: 0
 --- !u!1 &1876546749
 GameObject:
   m_ObjectHideFlags: 0
@@ -10007,6 +10048,7 @@ MonoBehaviour:
   Fuerza_CC: {fileID: 1269211300497610314}
   Fuerza_D: {fileID: 354498818320528784}
   Fuerza_A: {fileID: 5665932119726914469}
+  Fuerza_total: 0
 --- !u!1 &2138236846
 GameObject:
   m_ObjectHideFlags: 0
@@ -10442,8 +10484,8 @@ SceneRoots:
   m_Roots:
   - {fileID: 1661463125}
   - {fileID: 1479069356}
-  - {fileID: 1207888828}
   - {fileID: 378523227}
   - {fileID: 1448157477}
   - {fileID: 1665779787}
   - {fileID: 1859709968}
+  - {fileID: 1207888828}

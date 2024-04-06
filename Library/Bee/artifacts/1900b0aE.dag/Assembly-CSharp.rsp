@@ -367,6 +367,7 @@
 "Assets/Scripts/Player/efectos/hornA.cs"
 "Assets/Scripts/Player/efectos/hornCC.cs"
 "Assets/Scripts/Player/efectos/hornD.cs"
+"Assets/Scripts/Player/efectos/lider.cs"
 "Assets/Scripts/Player/efectos/lluvia.cs"
 "Assets/Scripts/Player/efectos/sol.cs"
 "Assets/Scripts/Player/efectos/tormenta.cs"

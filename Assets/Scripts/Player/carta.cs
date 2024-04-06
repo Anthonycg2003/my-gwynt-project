@@ -94,7 +94,10 @@ public class carta : MonoBehaviour
         }
         else if(turncontr.yourturn)
         {
-            Summon();
+            if(InBattle==false)
+            {
+                Summon();
+            } 
         }
         else
         {
@@ -103,44 +106,44 @@ public class carta : MonoBehaviour
     }
     void Summon()
     {
-        //verifica que sea tu turno y el tipo de la carta para asignarle un horizontal como padre 
-        if(tipo=="cc" && InBattle==false)
+        //verifica que puedas jugar en tu turno y el tipo de la carta para asignarle un horizontal como padre 
+        if(tipo=="cc" && turncontr.play_in_actual_round)
         {
             gameObject.transform.SetParent(cc.transform);
             InBattle=true;
-            if(turncontr.play_in_actual_round)
+            if(turncontr.play_Oin_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="d" && InBattle==false)
+        else if(tipo=="d" && turncontr.play_in_actual_round)
         {
             gameObject.transform.SetParent(d.transform);
              InBattle=true;
-            if(turncontr.play_in_actual_round)
+            if(turncontr.play_Oin_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="a" && InBattle==false)
+        else if(tipo=="a" && turncontr.play_in_actual_round)
         {
             gameObject.transform.SetParent(a.transform);
              InBattle=true;
-            if(turncontr.play_in_actual_round)
+            if(turncontr.play_Oin_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="w" && InBattle==false && w.transform.childCount<3)
+        else if(tipo=="w" && w.transform.childCount<3 && turncontr.play_in_actual_round)
         {
             gameObject.transform.SetParent(w.transform);
             InBattle=true;
-            if(turncontr.play_in_actual_round)
+            if(turncontr.play_Oin_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="despeje" && InBattle==false)
+        else if(tipo=="despeje" && turncontr.play_in_actual_round)
         {
             gameObject.transform.SetParent(graveyard.transform);
             InBattle=true;
@@ -148,36 +151,40 @@ public class carta : MonoBehaviour
             for(int i=0;i<a;i++)
             {
                 w.transform.GetChild(0).SetParent(graveyard.transform);
-            }   
+            }  
+            if(turncontr.play_Oin_actual_round)
+            {
+                turncontr.yourturn=false;
+            } 
         }
-        else if(tipo=="Hcc" && InBattle==false && Hcc.transform.childCount<1)
+        else if(tipo=="Hcc"&& Hcc.transform.childCount<1 && turncontr.play_in_actual_round)
         {
             gameObject.transform.SetParent(Hcc.transform);
              InBattle=true;
-            if(turncontr.play_in_actual_round)
+            if(turncontr.play_Oin_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="Hd"&& InBattle==false && Hd.transform.childCount<1)
+        else if(tipo=="Hd" && Hd.transform.childCount<1 && turncontr.play_in_actual_round)
         {
             gameObject.transform.SetParent(Hd.transform);
              InBattle=true;
-            if(turncontr.play_in_actual_round)
+            if(turncontr.play_Oin_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="Ha"&& InBattle==false && Ha.transform.childCount<1)
+        else if(tipo=="Ha"&& Ha.transform.childCount<1 && turncontr.play_in_actual_round)
         {
             gameObject.transform.SetParent(Ha.transform);
             InBattle=true;
-            if(turncontr.play_in_actual_round)
+            if(turncontr.play_Oin_actual_round)
             {
                 turncontr.yourturn=false;
             }
         }
-        else if(tipo=="s" && InBattle==false)
+        else if(tipo=="s" && turncontr.play_in_actual_round)
         {
             if(cc.transform.childCount!=0 || d.transform.childCount!=0 || a.transform.childCount!=0)
             {
@@ -190,7 +197,7 @@ public class carta : MonoBehaviour
             }
               
         }
-        else if(tipo=="cc y d" && InBattle==false)
+        else if(tipo=="cc y d" && turncontr.play_in_actual_round)
         {
             Ready_to_cc=true;
             Ready_to_d=true;
@@ -199,9 +206,9 @@ public class carta : MonoBehaviour
             Instantiate(block_hand,GameObject.Find("Canvas").transform);
             pass_Oturn.SetActive(false);
             pass_turn.SetActive(false);
-             Instantiate(texto_multitipo,GameObject.Find("Canvas").transform);
+            Instantiate(texto_multitipo,GameObject.Find("Canvas").transform);
         }
-        else if(tipo=="a y d" && InBattle==false)
+        else if(tipo=="a y d" && turncontr.play_in_actual_round)
         {
             Ready_to_a=true;
             Ready_to_d=true;
