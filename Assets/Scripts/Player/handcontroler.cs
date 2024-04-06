@@ -8,6 +8,8 @@ public class handcontroler : MonoBehaviour
     deckcontroler Deck;
     public int contador;
     GameObject graveyard;
+    public GameObject deck_image;
+
     void Start()
     {
         Deck=GameObject.Find("mazo player").GetComponent<deckcontroler>();
@@ -22,6 +24,7 @@ public class handcontroler : MonoBehaviour
             Deck.deck[0].transform.SetParent(gameObject.transform);//asignarle al primer elemnto del deck el horizontal mano como padre
             Deck.deck.RemoveAt(0);//removerlo de la lista
             contador--;
+            deck_image.GetComponent<Animator>().Play("draw");
         }
         if(gameObject.transform.childCount>10)//si hay mas de 10 cartas en la mano 
         {
@@ -30,12 +33,17 @@ public class handcontroler : MonoBehaviour
     }
     public IEnumerator Draw(int n)
     {
+        deck_image.GetComponent<Animator>().SetBool("shuffle",true);
+        yield return new WaitForSeconds(1f);
+        deck_image.GetComponent<Animator>().SetBool("shuffle",false);
         for(int i=0;i<n;i++)
         {
             Deck.deck[0].transform.SetParent(gameObject.transform);//asignarle al primer elemnto del deck el horizontal mano como padre
             Deck.deck.RemoveAt(0);//removerlo de la lista
             contador++;
+            deck_image.GetComponent<Animator>().SetBool("draw",true);
             yield return new WaitForSeconds(0.3f);
+            deck_image.GetComponent<Animator>().SetBool("draw",false);
         } 
         DrawTen?.Invoke(this,EventArgs.Empty);//activando evento cuando se ejecuta la funcion
     }

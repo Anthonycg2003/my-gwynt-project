@@ -1,21 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Ocarta : MonoBehaviour
 {
     public int poder;
     public string tipo;
     public string unidad;
-    // Start is called before the first frame update
-    void Start()
+    void OnMouseEnter()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject.Find("lupa de cartas").GetComponent<Image>().sprite=gameObject.GetComponent<Image>().sprite;
     }
 }
