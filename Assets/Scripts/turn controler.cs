@@ -52,7 +52,7 @@ public class turncontroler : MonoBehaviour
         {
             yourturn=false;
             play_in_actual_round=false;
-            Invoke("Count_pass_round",3f);
+            Invoke("Count_pass_round",2f);
             Instantiate(pass_turn_text,GameObject.Find("Canvas").transform);
         }
         
@@ -63,7 +63,7 @@ public class turncontroler : MonoBehaviour
         {
             yourturn=true;
             play_Oin_actual_round=false;
-            Invoke("Count_pass_round",3f);
+            Invoke("Count_pass_round",2f);
             Instantiate(pass_o_turn_text,GameObject.Find("Canvas").transform);
         }    
     }
