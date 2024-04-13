@@ -15,12 +15,15 @@ public class turncontroler : MonoBehaviour
     public TMP_Text pass_turn_text;
     public TMP_Text pass_o_turn_text;
     public int count_pass_round;
+    public GameObject coin;
     void Awake()
     {
         StarTurn();
         play_in_actual_round=true;
         play_Oin_actual_round=true;
         count_pass_round=0;
+        coin.GetComponent<Animator>().enabled=false;
+        Destroy(coin,3f);
     }
     void Update()
     {  
@@ -40,10 +43,12 @@ public class turncontroler : MonoBehaviour
         if(x==0)
         {
             yourturn=true;
+            coin.transform.rotation=Quaternion.Euler(0,0,0);
         }
-        else
+        if(x==1)
         {
             yourturn=false;
+            coin.transform.rotation=Quaternion.Euler(359,0,0);
         }
     }
     public void PassTurn()

@@ -87,6 +87,7 @@
     <Compile Include="Assets\Scripts\Opponent\O controler.cs" />
     <Compile Include="Assets\Scripts\Player\handcontroler.cs" />
     <Compile Include="Assets\Scripts\Player\summon_in_a.cs" />
+    <Compile Include="Assets\Scripts\coin flip.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
