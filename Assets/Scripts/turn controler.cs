@@ -8,7 +8,7 @@ using UnityEngine.UI;
 
 public class turncontroler : MonoBehaviour
 {
-    public bool yourturn;
+    public bool? yourturn;
     public bool play_in_actual_round;
     public bool play_Oin_actual_round;
     public TMP_Text turntext;
@@ -18,11 +18,10 @@ public class turncontroler : MonoBehaviour
     public GameObject coin;
     void Awake()
     {
-        StarTurn();
+        Invoke("StarTurn",0.2f);
         play_in_actual_round=true;
         play_Oin_actual_round=true;
         count_pass_round=0;
-        coin.GetComponent<Animator>().enabled=false;
         Destroy(coin,3f);
     }
     void Update()
@@ -39,13 +38,14 @@ public class turncontroler : MonoBehaviour
     }
     void StarTurn()
     {
+        coin.GetComponent<Animator>().enabled=false;
         int x=Random.Range(0,2);
         if(x==0)
         {
             yourturn=true;
             coin.transform.rotation=Quaternion.Euler(0,0,0);
         }
-        if(x==1)
+        else
         {
             yourturn=false;
             coin.transform.rotation=Quaternion.Euler(359,0,0);

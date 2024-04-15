@@ -129,7 +129,7 @@ public class carta : MonoBehaviour
                 turncontr.yourturn=false;
             }
         }
-        else if(turncontr.yourturn)
+        else if(turncontr.yourturn==true)
         {
             if(InBattle==false)
             {

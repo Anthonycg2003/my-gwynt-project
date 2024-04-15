@@ -14,7 +14,7 @@ public class Ocontroler : MonoBehaviour
     GameObject Hd;
     GameObject Ha;
     GameObject hand;
-    public int contador;
+    int contador;
     bool Is_Summon;
     void Start()
     {
@@ -106,6 +106,5 @@ public class Ocontroler : MonoBehaviour
         }
         Is_Summon=false;
         contador++;
-
     }
 }
