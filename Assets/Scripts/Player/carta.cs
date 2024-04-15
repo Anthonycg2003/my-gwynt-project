@@ -271,7 +271,10 @@ public class carta : MonoBehaviour
         int count_child=zone.transform.childCount;
         for(int i=0;i<count_child;i++)
         {
-            zone.transform.GetChild(i).gameObject.GetComponent<carta>().Is_Decoy_activate=true;
+            if(zone.transform.GetChild(i).gameObject.GetComponent<carta>().unidad=="p")
+            {
+                zone.transform.GetChild(i).gameObject.GetComponent<carta>().Is_Decoy_activate=true;
+            }
         }
     }
     void Activate_Odecoy_mark(GameObject zone)
@@ -279,7 +282,10 @@ public class carta : MonoBehaviour
         int count_child=zone.transform.childCount;
         for(int i=0;i<count_child;i++)
         {
-            zone.transform.GetChild(i).gameObject.GetComponent<Ocarta>().Is_Decoy_activate=true;
+            if(zone.transform.GetChild(i).gameObject.GetComponent<Ocarta>().unidad=="p")
+            {
+                zone.transform.GetChild(i).gameObject.GetComponent<Ocarta>().Is_Decoy_activate=true;
+            }
         }
     }
     void Disable_decoy_mark(GameObject zone)

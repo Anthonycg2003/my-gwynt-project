@@ -41,7 +41,7 @@ public class summon_in_cc : MonoBehaviour
                 pass_turn.SetActive(true);
                 Destroy(GameObject.FindGameObjectWithTag("block collider"));
                 Destroy(GameObject.FindGameObjectWithTag("texto multitipo"));
-                if(turncontrol.play_in_actual_round)
+                if(turncontrol.play_Oin_actual_round)
                 {
                     turncontrol.yourturn=false;
                 }
