@@ -361,6 +361,7 @@
 "Assets/Scripts/Opponent/O controler.cs"
 "Assets/Scripts/Opponent/O deckcontroler.cs"
 "Assets/Scripts/Opponent/O handcontroler.cs"
+"Assets/Scripts/Opponent/O lider.cs"
 "Assets/Scripts/Opponent/OPower.cs"
 "Assets/Scripts/Player/carta.cs"
 "Assets/Scripts/Player/deckcontroler.cs"

@@ -68,6 +68,7 @@
     <Compile Include="Assets\Scripts\Opponent\O carta.cs" />
     <Compile Include="Assets\Scripts\MenuCambio.cs" />
     <Compile Include="Assets\Prefabs\Destroy tem text.cs" />
+    <Compile Include="Assets\Scripts\Opponent\O lider.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\lluvia.cs" />
     <Compile Include="Assets\Scripts\Player\Power.cs" />
     <Compile Include="Assets\Scripts\Opponent\O deckcontroler.cs" />
