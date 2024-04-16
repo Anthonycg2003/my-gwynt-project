@@ -38,7 +38,6 @@ public class carta : MonoBehaviour
     public bool Ready_to_a;
     public GameObject block_hand;
     GameObject pass_turn;
-    GameObject pass_Oturn;
     public TMP_Text texto_multitipo;
     //cuando se activa el senuelo
     public bool Is_Decoy_activate;
@@ -51,7 +50,6 @@ public class carta : MonoBehaviour
     void Start()
     {
         pass_turn=GameObject.Find("pass turn");
-        pass_Oturn=GameObject.Find("pass O turn");
         cc=GameObject.Find("player cc zone");
         d=GameObject.Find("player d zone");
         a=GameObject.Find("player a zone");  
@@ -120,7 +118,6 @@ public class carta : MonoBehaviour
             Disable_Odecoy_mark(Occ);
             Disable_Odecoy_mark(Od);
             Disable_Odecoy_mark(Oa);
-            pass_Oturn.SetActive(true);
             pass_turn.SetActive(true);
             InBattle=false;
             gameObject.transform.SetParent(hand.transform);
@@ -225,7 +222,6 @@ public class carta : MonoBehaviour
         {
             if(cc.transform.childCount!=0 || d.transform.childCount!=0 || a.transform.childCount!=0 || Occ.transform.childCount!=0 || Od.transform.childCount!=0 || Oa.transform.childCount!=0)
             {
-                pass_Oturn.SetActive(false);
                 pass_turn.SetActive(false);
                 InBattle=true;
                 Activate_decoy_mark(cc);
@@ -250,7 +246,6 @@ public class carta : MonoBehaviour
             cc.GetComponent<Collider2D>().enabled=true;
             d.GetComponent<Collider2D>().enabled=true; 
             Instantiate(block_hand,GameObject.Find("Canvas").transform);
-            pass_Oturn.SetActive(false);
             pass_turn.SetActive(false);
             Instantiate(texto_multitipo,GameObject.Find("Canvas").transform);
         }
@@ -261,7 +256,6 @@ public class carta : MonoBehaviour
             a.GetComponent<Collider2D>().enabled=true;
             d.GetComponent<Collider2D>().enabled=true; 
             Instantiate(block_hand,GameObject.Find("Canvas").transform);
-            pass_Oturn.SetActive(false);
             pass_turn.SetActive(false);
             Instantiate(texto_multitipo,GameObject.Find("Canvas").transform);
         }

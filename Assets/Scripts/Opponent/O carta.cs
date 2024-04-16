@@ -19,14 +19,12 @@ public class Ocarta : MonoBehaviour
     GameObject d;
     GameObject a;
     GameObject pass_turn;
-    GameObject pass_Oturn;
     void Start()
     {
         Is_Decoy_activate=false;
         hand=GameObject.Find("player hand");
         Ohand=GameObject.Find("O hand");
         pass_turn=GameObject.Find("pass turn");
-        pass_Oturn=GameObject.Find("pass O turn");
         cc=GameObject.Find("player cc zone");
         d=GameObject.Find("player d zone");
         a=GameObject.Find("player a zone");
@@ -58,7 +56,6 @@ public class Ocarta : MonoBehaviour
             Disable_Odecoy_mark(Occ);
             Disable_Odecoy_mark(Od);
             Disable_Odecoy_mark(Oa);
-            pass_Oturn.SetActive(true);
             pass_turn.SetActive(true);
             gameObject.transform.SetParent(Ohand.transform);
             if(GameObject.Find("turn controler").GetComponent<turncontroler>().play_Oin_actual_round)

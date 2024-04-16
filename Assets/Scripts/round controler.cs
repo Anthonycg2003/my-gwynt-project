@@ -36,8 +36,7 @@ public class roundcontroler : MonoBehaviour
    public int player_round_wins;
    public int O_round_wins;
    bool finish_game;
-   
-    // Start is called before the first frame update
+   public TMP_Text text_round;
     void Start()
     {
         round=1;
@@ -88,6 +87,7 @@ public class roundcontroler : MonoBehaviour
             Send_graveyardO(Oa);
             Send_graveyardO(Occ);
             Send_graveyardO(Od);
+            text_round.text="Segunda Ronda";
             hand.GetComponent<handcontroler>().contador+=2;
             O_hand.GetComponent<Ohandcontroler>().contador-=2;//para robar 2 cartas al finalizar la ronda
             pass_1st_round=true;
@@ -126,6 +126,7 @@ public class roundcontroler : MonoBehaviour
             Send_graveyardO(Oa);
             Send_graveyardO(Occ);
             Send_graveyardO(Od);
+            text_round.text="Tercera Ronda";
             hand.GetComponent<handcontroler>().contador+=2;//para robar 2 cartas al finalizar la ronda
             pass_2nd_round=true;
             O_hand.GetComponent<Ohandcontroler>().contador-=2;
