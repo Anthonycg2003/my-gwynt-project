@@ -34,6 +34,7 @@ public class gamecontroler : MonoBehaviour
                 Instantiate(draw,GameObject.Find("Canvas").transform);
                 finished_game=true;
             }
+            Time.timeScale=0f;
         }
     
         

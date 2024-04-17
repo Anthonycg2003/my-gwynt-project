@@ -47,8 +47,6 @@ public class roundcontroler : MonoBehaviour
         O_hand=GameObject.Find("O hand");
         finish_game=false;
     }
-
-    // Update is called once per frame
     void Update()
     {
         int player_power=TotalPower.GetComponent<Power>().Fuerza_total;
