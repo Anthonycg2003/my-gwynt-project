@@ -67,7 +67,9 @@
     <Compile Include="Assets\Scripts\Player\summon_in_d.cs" />
     <Compile Include="Assets\Scripts\Opponent\O carta.cs" />
     <Compile Include="Assets\Scripts\MenuCambio.cs" />
+    <Compile Include="Assets\Scripts\Player\efectos\mult fuerza.cs" />
     <Compile Include="Assets\Prefabs\Destroy tem text.cs" />
+    <Compile Include="Assets\Scripts\Player\efectos\draw a card.cs" />
     <Compile Include="Assets\Scripts\Opponent\O lider.cs" />
     <Compile Include="Assets\Scripts\Player\efectos\lluvia.cs" />
     <Compile Include="Assets\Scripts\Player\Power.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Assets\Scripts\Player\handcontroler.cs" />
     <Compile Include="Assets\Scripts\Player\summon_in_a.cs" />
     <Compile Include="Assets\Scripts\coin flip.cs" />
+    <Compile Include="Assets\Scripts\Player\efectos\clean_zone.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

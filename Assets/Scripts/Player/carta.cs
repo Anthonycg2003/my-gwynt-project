@@ -46,6 +46,8 @@ public class carta : MonoBehaviour
     GameObject Od;
     GameObject Oa;
     public TMP_Text texto_decoy;
+    //para efectos
+    public bool tigri_mark;
     
     void Start()
     {
@@ -220,7 +222,7 @@ public class carta : MonoBehaviour
         }
         else if(tipo=="s" && turncontr.play_in_actual_round)
         {
-            if(cc.transform.childCount!=0 || d.transform.childCount!=0 || a.transform.childCount!=0 || Occ.transform.childCount!=0 || Od.transform.childCount!=0 || Oa.transform.childCount!=0)
+            if(Check_plata_cards_in_field())
             {
                 pass_turn.SetActive(false);
                 InBattle=true;
@@ -297,5 +299,51 @@ public class carta : MonoBehaviour
         {
             zone.transform.GetChild(i).gameObject.GetComponent<Ocarta>().Is_Decoy_activate=false;
         }
+    }
+    bool Check_plata_cards_in_field()
+    {
+        for(int i=0;i<cc.transform.childCount;i++)
+        {
+            if(cc.transform.GetChild(i).gameObject.GetComponent<carta>().unidad=="p")
+            {
+                return true;
+            }  
+        }
+        for(int i=0;i<d.transform.childCount;i++)
+        {
+            if(d.transform.GetChild(i).gameObject.GetComponent<carta>().unidad=="p")
+            {
+                return true;
+            }  
+        }
+        for(int i=0;i<a.transform.childCount;i++)
+        {
+            if(a.transform.GetChild(i).gameObject.GetComponent<carta>().unidad=="p")
+            {
+                return true;
+            }  
+        }
+        for(int i=0;i<Occ.transform.childCount;i++)
+        {
+            if(Occ.transform.GetChild(i).gameObject.GetComponent<Ocarta>().unidad=="p")
+            {
+                return true;
+            }  
+        }
+        for(int i=0;i<Od.transform.childCount;i++)
+        {
+            if(Od.transform.GetChild(i).gameObject.GetComponent<Ocarta>().unidad=="p")
+            {
+                return true;
+            }  
+        }
+        for(int i=0;i<Oa.transform.childCount;i++)
+        {
+            if(Oa.transform.GetChild(i).gameObject.GetComponent<Ocarta>().unidad=="p")
+            {
+                return true;
+            }  
+        }
+        return false;
     }
 }
