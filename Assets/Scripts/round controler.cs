@@ -37,6 +37,11 @@ public class roundcontroler : MonoBehaviour
    public int O_round_wins;
    bool finish_game;
    public TMP_Text text_round;
+   //para detruir vidas en la tercera ronda
+   bool first_life_destroyed;
+   bool first_lifeO_destroyed;
+   bool second_life_destroyed;
+   bool second_lifeO_destroyed;
     void Start()
     {
         round=1;
@@ -46,6 +51,10 @@ public class roundcontroler : MonoBehaviour
         totalOPower=GameObject.Find("O power");
         O_hand=GameObject.Find("O hand");
         finish_game=false;
+        first_life_destroyed=false;
+        first_lifeO_destroyed=false;
+        second_life_destroyed=false;
+        second_lifeO_destroyed=false;
     }
     void Update()
     {
@@ -57,6 +66,7 @@ public class roundcontroler : MonoBehaviour
             {
                 player_round_wins++;
                 Destroy(GameObject.Find("O life 1"));
+                first_lifeO_destroyed=true;
                 Turncontroler.yourturn=true;
                 Instantiate(round_win,GameObject.Find("Canvas").transform);
             }
@@ -64,6 +74,7 @@ public class roundcontroler : MonoBehaviour
             {
                 O_round_wins++;
                 Destroy(GameObject.Find("player life 1"));
+                first_life_destroyed=true;
                 Turncontroler.yourturn=false;
                 Instantiate(round_lose,GameObject.Find("Canvas").transform);
             }
@@ -73,6 +84,8 @@ public class roundcontroler : MonoBehaviour
                 player_round_wins++;
                 Destroy(GameObject.Find("O life 1"));
                 Destroy(GameObject.Find("player life 1"));
+                first_life_destroyed=true;
+                first_lifeO_destroyed=true;
                 Instantiate(round_draw,GameObject.Find("Canvas").transform);
             }
             Send_graveyard(w);
@@ -96,6 +109,7 @@ public class roundcontroler : MonoBehaviour
             {
                 player_round_wins++;
                 Destroy(GameObject.Find("O life 2"));
+                second_lifeO_destroyed=true;
                 Turncontroler.yourturn=true;
                 Instantiate(round_win,GameObject.Find("Canvas").transform);
             }
@@ -103,6 +117,7 @@ public class roundcontroler : MonoBehaviour
             {
                 O_round_wins++;
                 Destroy(GameObject.Find("player life 2"));
+                second_life_destroyed=true;
                 Turncontroler.yourturn=false;
                 Instantiate(round_lose,GameObject.Find("Canvas").transform);
             }
@@ -111,6 +126,8 @@ public class roundcontroler : MonoBehaviour
                 O_round_wins++;
                 player_round_wins++;
                 Destroy(GameObject.Find("O life 2"));
+                second_life_destroyed=true;
+                second_lifeO_destroyed=true;
                 Destroy(GameObject.Find("player life 2"));
                 Instantiate(round_draw,GameObject.Find("Canvas").transform);
             }
@@ -135,17 +152,49 @@ public class roundcontroler : MonoBehaviour
             {
                 player_round_wins++;
                 Instantiate(round_win,GameObject.Find("Canvas").transform);
+                if(second_lifeO_destroyed)
+                {
+                    Destroy(GameObject.Find("O life 1"));
+                }
+                if(first_lifeO_destroyed)
+                {
+                    Destroy(GameObject.Find("O life 2"));
+                }
             }
             else if(O_power>player_power)
             {
                 O_round_wins++;
                 Instantiate(round_lose,GameObject.Find("Canvas").transform);
+                if(second_life_destroyed)
+                {
+                    Destroy(GameObject.Find("player life 1"));
+                }
+                if(first_life_destroyed)
+                {
+                    Destroy(GameObject.Find("player life 2"));
+                }
             }
             else if(O_power==player_power)
             {
                 O_round_wins++;
                 player_round_wins++;
                 Instantiate(round_draw,GameObject.Find("Canvas").transform);
+                if(second_lifeO_destroyed)
+                {
+                    Destroy(GameObject.Find("O life 1"));
+                }
+                if(first_lifeO_destroyed)
+                {
+                    Destroy(GameObject.Find("O life 2"));
+                }
+                if(second_life_destroyed)
+                {
+                    Destroy(GameObject.Find("player life 1"));
+                }
+                if(first_life_destroyed)
+                {
+                    Destroy(GameObject.Find("player life 2"));
+                }
             }
             Send_graveyard(w);
             Send_graveyard(a);

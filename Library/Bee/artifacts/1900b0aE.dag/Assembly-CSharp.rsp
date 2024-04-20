@@ -365,7 +365,6 @@
 "Assets/Scripts/Opponent/OPower.cs"
 "Assets/Scripts/Player/carta.cs"
 "Assets/Scripts/Player/deckcontroler.cs"
-"Assets/Scripts/Player/efectos/clean_zone.cs"
 "Assets/Scripts/Player/efectos/draw a card.cs"
 "Assets/Scripts/Player/efectos/hornA.cs"
 "Assets/Scripts/Player/efectos/hornCC.cs"
